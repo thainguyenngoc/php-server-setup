@@ -30,12 +30,8 @@ https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-
 
 5. Install Composer
 
-* cd ~
-* curl -sS https://getcomposer.org/installer -o composer-setup.php
-* composer
-* echo "export PATH=$PATH:$HOME/.composer/vendor/bin" >> ~/.bashrc
-* source ~/.bashrc
-
+* sudo curl -s https://getcomposer.org/installer | php
+* sudo mv composer.phar /usr/local/bin/composer
 
 6. Install Valet
 * sudo chown -R $USER ~/.composer/
