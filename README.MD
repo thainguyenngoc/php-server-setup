@@ -44,7 +44,9 @@ https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-
 * nvm use node
 
 8. Install yarn
-* sudo apt install yarn
+* curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+
+* apt-get install -y nodejs
 
 9. Install Git
 * sudo apt install git
