@@ -29,9 +29,9 @@ https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-
 * sudo apt install php7.1-cli php7.1-common php7.1-curl php7.1-json php7.1-opcache php7.1-mysql php7.1-mbstring php7.1-mcrypt php7.1-zip php7.1-bcmath php7.1-gd php7.1-gmp php7.1-imagick php7.1-intl php7.1-simplexml php 7.1-dom
 
 5. Install Composer
-
-* sudo curl -s https://getcomposer.org/installer | php
-* sudo mv composer.phar /usr/local/bin/composer
+* cd ~
+* curl -sS https://getcomposer.org/installer -o composer-setup.php
+* sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer
 
 6. Install Valet
 * sudo chown -R $USER ~/.composer/
