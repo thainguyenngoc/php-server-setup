@@ -40,7 +40,7 @@ https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-
 * valet install
 
 7. Install Node
-* nvm install node
+* nvm install 8.9
 * nvm use node
 
 8. Install yarn
