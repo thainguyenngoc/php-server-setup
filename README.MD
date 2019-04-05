@@ -39,7 +39,7 @@ https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-
 * composer global require cpriego/valet-linux
 * valet install
 * export PATH=$PATH:~/.composer/vendor/bin
-* s
+* source ~/.bashrc
 
 7. Install Node
 * nvm install 8.9
