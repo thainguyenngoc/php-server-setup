@@ -2,9 +2,10 @@ sudo apt update
 sudo apt upgrade
 
 1. Install nvm
+* sudo apt install curl
 * curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
-* close terminal
-* new terminal
+close terminal
+new terminal
 * command -v nvm
 
 2. Install nginx
@@ -26,7 +27,9 @@ https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-
 * sudo add-apt-repository ppa:ondrej/php
 * sudo apt update
 * sudo apt install php7.1
-* sudo apt install php7.1-cli php7.1-common php7.1-curl php7.1-json php7.1-opcache php7.1-mysql php7.1-mbstring php7.1-mcrypt php7.1-zip php7.1-bcmath php7.1-gd php7.1-gmp php7.1-imagick php7.1-intl php7.1-simplexml php 7.1-dom
+* sudo apt install php7.1-cli php7.1-common php7.1-curl php7.1-json php7.1-opcache php7.1-mysql php7.1-mbstring php7.1-mcrypt php7.1-zip php7.1-bcmath php7.1-gd php7.1-gmp php7.1-imagick php7.1-intl php7.1-simplexml php 7.1-dom php7.1-fpm php7.1-xml
+* sudo rm /usr/bin/php
+* sudo ln -s /usr/bin/php7.1 /usr/bin/php
 
 5. Install Composer
 * cd ~
@@ -37,18 +40,19 @@ https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-
 * sudo chown -R $USER ~/.composer/
 * sudo apt install network-manager libnss3-tools jq xsel
 * composer global require cpriego/valet-linux
-* valet install
 * export PATH=$PATH:~/.composer/vendor/bin
 * source ~/.bashrc
+* valet install
 
 7. Install Node
 * nvm install 8.9
 * nvm use node
 
 8. Install yarn
-* curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+* curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+* echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
 
-* apt-get install -y nodejs
+* sudo apt-get update && sudo apt-get install yarn
 
 9. Install Git
 * sudo apt install git
@@ -64,7 +68,8 @@ https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-
 
 11. Install x-debug
 
-* get php-debug from visual studio code
+get php-debug from visual studio code
+* sudo apt install php-xdebug
 * php -i | grep xdebug
 * sudo gedit /etc/php/7.1/cli/conf.d/20-xdebug.ini
 
