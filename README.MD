@@ -44,6 +44,23 @@ https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-
 * source ~/.bashrc
 * valet install
 
+```
+If you are getting valet command not found, then the composer path is not currently added. To do so, first we need to check the existing composer path by the following command
+1. composer global help
+Now add the path(if your path is .config/composer/ then it would be)
+1. echo "export PATH=$PATH:$HOME/.config/composer/vendor/bin" >> ~/.bashrc
+and source the path
+2. source ~/.bashrc
+
+to check the path run 
+2. echo $PATH
+
+You can also change the path in ~/.profile or ~/.bashrc
+
+Now to install valet just run 
+1. valet install
+```
+
 7. Install Node
 * nvm install 8.9
 * nvm use node
